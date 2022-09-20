@@ -17,7 +17,12 @@
 		A4B94DBA28DA015B008FDDDE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A4B94DB928DA015B008FDDDE /* FirebaseAuth */; };
 		A4B94DBC28DA015B008FDDDE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A4B94DBB28DA015B008FDDDE /* FirebaseFirestore */; };
 		A4B94DBF28DA03C6008FDDDE /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A4B94DBE28DA03C6008FDDDE /* GoogleSignIn */; };
-		A4B94DC128DA1CEB008FDDDE /* client_667432525713-klhnopsml54vcgphht41knjopvtqludc.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4B94DC028DA1CEB008FDDDE /* client_667432525713-klhnopsml54vcgphht41knjopvtqludc.apps.googleusercontent.com.plist */; };
+		A4B94DCC28DA3005008FDDDE /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DCB28DA3005008FDDDE /* AuthView.swift */; };
+		A4B94DCE28DA3024008FDDDE /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DCD28DA3024008FDDDE /* AuthVM.swift */; };
+		A4B94DD028DA3140008FDDDE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DCF28DA3140008FDDDE /* HomeView.swift */; };
+		A4B94DD228DA3169008FDDDE /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DD128DA3169008FDDDE /* HomeVM.swift */; };
+		A4B94DD628DA3F86008FDDDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4B94DD528DA3F86008FDDDE /* GoogleService-Info.plist */; };
+		A4B94DD828DA40BA008FDDDE /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DD728DA40BA008FDDDE /* Application.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +53,13 @@
 		A4B94DA528D9FE3A008FDDDE /* SearchYourRecipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchYourRecipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B94DA928D9FE3A008FDDDE /* SearchYourRecipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchYourRecipeUITests.swift; sourceTree = "<group>"; };
 		A4B94DAB28D9FE3A008FDDDE /* SearchYourRecipeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchYourRecipeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A4B94DC028DA1CEB008FDDDE /* client_667432525713-klhnopsml54vcgphht41knjopvtqludc.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_667432525713-klhnopsml54vcgphht41knjopvtqludc.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		A4B94DC228DA1D50008FDDDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A4B94DCB28DA3005008FDDDE /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		A4B94DCD28DA3024008FDDDE /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
+		A4B94DCF28DA3140008FDDDE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A4B94DD128DA3169008FDDDE /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		A4B94DD528DA3F86008FDDDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4B94DD728DA40BA008FDDDE /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +113,17 @@
 		A4B94D8D28D9FE38008FDDDE /* SearchYourRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				A4B94DC328DA2EAC008FDDDE /* Views */,
+				A4B94DC828DA2EF5008FDDDE /* ViewModels */,
+				A4B94DC728DA2EEB008FDDDE /* Components */,
+				A4B94DC628DA2EE1008FDDDE /* Models */,
+				A4B94DC528DA2ED7008FDDDE /* Constants */,
+				A4B94DC428DA2ECA008FDDDE /* Utilities */,
 				A4B94DC228DA1D50008FDDDE /* Info.plist */,
+				A4B94DD528DA3F86008FDDDE /* GoogleService-Info.plist */,
 				A4B94D8E28D9FE38008FDDDE /* SearchYourRecipeApp.swift */,
 				A4B94D9028D9FE38008FDDDE /* ContentView.swift */,
 				A4B94D9228D9FE3A008FDDDE /* Assets.xcassets */,
-				A4B94DC028DA1CEB008FDDDE /* client_667432525713-klhnopsml54vcgphht41knjopvtqludc.apps.googleusercontent.com.plist */,
 				A4B94D9428D9FE3A008FDDDE /* Preview Content */,
 			);
 			path = SearchYourRecipe;
@@ -136,6 +152,53 @@
 				A4B94DAB28D9FE3A008FDDDE /* SearchYourRecipeUITestsLaunchTests.swift */,
 			);
 			path = SearchYourRecipeUITests;
+			sourceTree = "<group>";
+		};
+		A4B94DC328DA2EAC008FDDDE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4B94DCB28DA3005008FDDDE /* AuthView.swift */,
+				A4B94DCF28DA3140008FDDDE /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4B94DC428DA2ECA008FDDDE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A4B94DD728DA40BA008FDDDE /* Application.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A4B94DC528DA2ED7008FDDDE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A4B94DC628DA2EE1008FDDDE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4B94DC728DA2EEB008FDDDE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A4B94DC828DA2EF5008FDDDE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A4B94DCD28DA3024008FDDDE /* AuthVM.swift */,
+				A4B94DD128DA3169008FDDDE /* HomeVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,8 +315,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4B94D9628D9FE3A008FDDDE /* Preview Assets.xcassets in Resources */,
-				A4B94DC128DA1CEB008FDDDE /* client_667432525713-klhnopsml54vcgphht41knjopvtqludc.apps.googleusercontent.com.plist in Resources */,
 				A4B94D9328D9FE3A008FDDDE /* Assets.xcassets in Resources */,
+				A4B94DD628DA3F86008FDDDE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +341,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B94DCE28DA3024008FDDDE /* AuthVM.swift in Sources */,
+				A4B94DD828DA40BA008FDDDE /* Application.swift in Sources */,
+				A4B94DD228DA3169008FDDDE /* HomeVM.swift in Sources */,
 				A4B94D9128D9FE38008FDDDE /* ContentView.swift in Sources */,
+				A4B94DD028DA3140008FDDDE /* HomeView.swift in Sources */,
+				A4B94DCC28DA3005008FDDDE /* AuthView.swift in Sources */,
 				A4B94D8F28D9FE38008FDDDE /* SearchYourRecipeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
