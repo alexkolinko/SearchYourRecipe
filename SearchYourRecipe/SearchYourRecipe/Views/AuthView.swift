@@ -17,15 +17,16 @@ struct AuthView: View {
     @State var showSignUpSheet: Bool = false
     
     var body: some View {
+        ZStack {
+            Color.background
+                .edgesIgnoringSafeArea(.all)
+        
         VStack {
             
-            Text("Eat Right")
+            Text("Search Your Recipe")
                 .font(.system(.title, design: .rounded))
-                .foregroundColor(Color.gray)
-            
             
             Text("—— Сontinue with ——").font(.system(.body, design: .rounded))
-                .foregroundColor(Color.black).opacity(0.6)
                 .padding(.vertical, 30)
             
             Button(action: {
@@ -44,6 +45,7 @@ struct AuthView: View {
             
         }
         .padding()
+    }
     }
 }
 

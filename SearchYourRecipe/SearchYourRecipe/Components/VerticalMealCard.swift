@@ -19,7 +19,11 @@ struct VerticalMealCard: View {
     
     var body: some View {
         NavigationLink {
-        
+            // Extract recipe ID from URI
+            let recipeID = String(self.uri.suffix(32))
+            RecipeDetailsView(recipeID: recipeID, userID: userID)
+                .environmentObject(authVM)
+                .toolbar(.hidden)
         } label: {
             VStack {
                 ZStack {
