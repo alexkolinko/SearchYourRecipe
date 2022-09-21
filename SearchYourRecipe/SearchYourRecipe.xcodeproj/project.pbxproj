@@ -23,6 +23,18 @@
 		A4B94DD228DA3169008FDDDE /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DD128DA3169008FDDDE /* HomeVM.swift */; };
 		A4B94DD628DA3F86008FDDDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4B94DD528DA3F86008FDDDE /* GoogleService-Info.plist */; };
 		A4B94DD828DA40BA008FDDDE /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DD728DA40BA008FDDDE /* Application.swift */; };
+		A4B94DDA28DA42C5008FDDDE /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DD928DA42C5008FDDDE /* APIModel.swift */; };
+		A4B94DDC28DA42E3008FDDDE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DDB28DA42E3008FDDDE /* State.swift */; };
+		A4B94DDE28DA4323008FDDDE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DDD28DA4323008FDDDE /* Constants.swift */; };
+		A4B94DE028DA44C4008FDDDE /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DDF28DA44C4008FDDDE /* RecipeService.swift */; };
+		A4B94DE228DA44F0008FDDDE /* SearchUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DE128DA44F0008FDDDE /* SearchUtil.swift */; };
+		A4B94DE428DA45FC008FDDDE /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DE328DA45FC008FDDDE /* HomeHeader.swift */; };
+		A4B94DE628DA4688008FDDDE /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DE528DA4688008FDDDE /* LoadingIndicator.swift */; };
+		A4B94DE828DA46B1008FDDDE /* NutrientStickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DE728DA46B1008FDDDE /* NutrientStickers.swift */; };
+		A4B94DEA28DA46E5008FDDDE /* ErrorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DE928DA46E5008FDDDE /* ErrorCard.swift */; };
+		A4B94DEC28DA4712008FDDDE /* VerticalMealCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DEB28DA4712008FDDDE /* VerticalMealCard.swift */; };
+		A4B94DF028DA4779008FDDDE /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DEF28DA4779008FDDDE /* PullToRefresh.swift */; };
+		A4B94DF228DA47A9008FDDDE /* NoRecipesFoundCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DF128DA47A9008FDDDE /* NoRecipesFoundCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +72,18 @@
 		A4B94DD128DA3169008FDDDE /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		A4B94DD528DA3F86008FDDDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4B94DD728DA40BA008FDDDE /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		A4B94DD928DA42C5008FDDDE /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		A4B94DDB28DA42E3008FDDDE /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		A4B94DDD28DA4323008FDDDE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A4B94DDF28DA44C4008FDDDE /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
+		A4B94DE128DA44F0008FDDDE /* SearchUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUtil.swift; sourceTree = "<group>"; };
+		A4B94DE328DA45FC008FDDDE /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		A4B94DE528DA4688008FDDDE /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		A4B94DE728DA46B1008FDDDE /* NutrientStickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientStickers.swift; sourceTree = "<group>"; };
+		A4B94DE928DA46E5008FDDDE /* ErrorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCard.swift; sourceTree = "<group>"; };
+		A4B94DEB28DA4712008FDDDE /* VerticalMealCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalMealCard.swift; sourceTree = "<group>"; };
+		A4B94DEF28DA4779008FDDDE /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
+		A4B94DF128DA47A9008FDDDE /* NoRecipesFoundCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecipesFoundCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				A4B94DD728DA40BA008FDDDE /* Application.swift */,
+				A4B94DDF28DA44C4008FDDDE /* RecipeService.swift */,
+				A4B94DE128DA44F0008FDDDE /* SearchUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -174,6 +200,7 @@
 		A4B94DC528DA2ED7008FDDDE /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				A4B94DDD28DA4323008FDDDE /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -181,6 +208,8 @@
 		A4B94DC628DA2EE1008FDDDE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A4B94DD928DA42C5008FDDDE /* APIModel.swift */,
+				A4B94DDB28DA42E3008FDDDE /* State.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +217,13 @@
 		A4B94DC728DA2EEB008FDDDE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A4B94DE328DA45FC008FDDDE /* HomeHeader.swift */,
+				A4B94DE528DA4688008FDDDE /* LoadingIndicator.swift */,
+				A4B94DE728DA46B1008FDDDE /* NutrientStickers.swift */,
+				A4B94DE928DA46E5008FDDDE /* ErrorCard.swift */,
+				A4B94DEB28DA4712008FDDDE /* VerticalMealCard.swift */,
+				A4B94DEF28DA4779008FDDDE /* PullToRefresh.swift */,
+				A4B94DF128DA47A9008FDDDE /* NoRecipesFoundCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -343,10 +379,22 @@
 			files = (
 				A4B94DCE28DA3024008FDDDE /* AuthVM.swift in Sources */,
 				A4B94DD828DA40BA008FDDDE /* Application.swift in Sources */,
+				A4B94DE828DA46B1008FDDDE /* NutrientStickers.swift in Sources */,
 				A4B94DD228DA3169008FDDDE /* HomeVM.swift in Sources */,
+				A4B94DF028DA4779008FDDDE /* PullToRefresh.swift in Sources */,
 				A4B94D9128D9FE38008FDDDE /* ContentView.swift in Sources */,
+				A4B94DDA28DA42C5008FDDDE /* APIModel.swift in Sources */,
+				A4B94DDE28DA4323008FDDDE /* Constants.swift in Sources */,
+				A4B94DE428DA45FC008FDDDE /* HomeHeader.swift in Sources */,
+				A4B94DEC28DA4712008FDDDE /* VerticalMealCard.swift in Sources */,
+				A4B94DDC28DA42E3008FDDDE /* State.swift in Sources */,
+				A4B94DE228DA44F0008FDDDE /* SearchUtil.swift in Sources */,
+				A4B94DF228DA47A9008FDDDE /* NoRecipesFoundCard.swift in Sources */,
+				A4B94DE028DA44C4008FDDDE /* RecipeService.swift in Sources */,
+				A4B94DE628DA4688008FDDDE /* LoadingIndicator.swift in Sources */,
 				A4B94DD028DA3140008FDDDE /* HomeView.swift in Sources */,
 				A4B94DCC28DA3005008FDDDE /* AuthView.swift in Sources */,
+				A4B94DEA28DA46E5008FDDDE /* ErrorCard.swift in Sources */,
 				A4B94D8F28D9FE38008FDDDE /* SearchYourRecipeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
