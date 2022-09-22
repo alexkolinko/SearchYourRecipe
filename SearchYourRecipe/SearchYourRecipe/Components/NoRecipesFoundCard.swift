@@ -17,7 +17,7 @@ struct NoRecipesFoundCard: View {
             .overlay {
                 VStack {
                     VStack {
-                        Text("No recipes found for search term: \(searchTerm)")
+                        Text("No recipes found for search: \(searchTerm)")
                             .font(.system(.title2, design: .rounded))
                     }
                     .padding()
@@ -29,6 +29,6 @@ struct NoRecipesFoundCard: View {
 
 struct NoRecipesFoundCard_Previews: PreviewProvider {
     static var previews: some View {
-        NoRecipesFoundCard(searchTerm: "beeeeeef")
+        NoRecipesFoundCard(searchTerm: "salad")
     }
 }

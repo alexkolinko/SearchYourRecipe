@@ -22,7 +22,7 @@ class HomeViewModel: ObservableObject {
         }
         
         do {
-            let recipesResponse = try await RecipeService().get(url: K.URLs.recipesByName(query)) { data in
+            let recipesResponse = try await RecipeService().get(url: Constant.URLs.recipesByName(query)) { data in
                 return try? JSONDecoder().decode(Recipes.self, from: data)
             }
             
@@ -44,7 +44,6 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    // Conditional rendering
     func recipesDidLoad(state: StateType) -> Bool {
         return recipesLoaded
     }

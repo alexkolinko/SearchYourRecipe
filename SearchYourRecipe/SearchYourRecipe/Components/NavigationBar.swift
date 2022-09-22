@@ -12,7 +12,6 @@ struct NavigationBar: View {
     var dismiss: DismissAction
     var title: String?
     var pinButton: Bool = false
-    var userID: String?
     var recipeID: String?
     
     @EnvironmentObject var authVM: AuthViewModel

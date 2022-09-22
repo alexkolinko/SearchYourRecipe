@@ -39,6 +39,7 @@
 		A4B94DF628DB0EEC008FDDDE /* RecipeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DF528DB0EEC008FDDDE /* RecipeDetailsView.swift */; };
 		A4B94DF828DB0F1E008FDDDE /* RecipeDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DF728DB0F1E008FDDDE /* RecipeDetailsVM.swift */; };
 		A4B94DFA28DB0FB0008FDDDE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94DF928DB0FB0008FDDDE /* WebView.swift */; };
+		A4B94DFC28DB3132008FDDDE /* SearchYourRecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B94D8E28D9FE38008FDDDE /* SearchYourRecipeApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,11 +152,11 @@
 				A4B94DC628DA2EE1008FDDDE /* Models */,
 				A4B94DC528DA2ED7008FDDDE /* Constants */,
 				A4B94DC428DA2ECA008FDDDE /* Utilities */,
-				A4B94DC228DA1D50008FDDDE /* Info.plist */,
-				A4B94DD528DA3F86008FDDDE /* GoogleService-Info.plist */,
 				A4B94D8E28D9FE38008FDDDE /* SearchYourRecipeApp.swift */,
 				A4B94D9028D9FE38008FDDDE /* ContentView.swift */,
 				A4B94D9228D9FE3A008FDDDE /* Assets.xcassets */,
+				A4B94DC228DA1D50008FDDDE /* Info.plist */,
+				A4B94DD528DA3F86008FDDDE /* GoogleService-Info.plist */,
 				A4B94D9428D9FE3A008FDDDE /* Preview Content */,
 			);
 			path = SearchYourRecipe;
@@ -419,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B94DFC28DB3132008FDDDE /* SearchYourRecipeApp.swift in Sources */,
 				A4B94DA028D9FE3A008FDDDE /* SearchYourRecipeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

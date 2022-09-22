@@ -27,7 +27,7 @@ struct HomeHeader: View {
                     queryData = QueryData(query: searchTerm)
                 }
         }
-        .frame(width: K.SCREEN_WIDTH - 30, height: 40)
+        .frame(width: Constant.SCREEN_WIDTH - 30, height: 40)
         .padding(.vertical)
     }
 }
@@ -55,7 +55,7 @@ struct HomeHeader_Previews: PreviewProvider {
     static var previews: some View {
         HomeHeader(
             searchTerm: .constant(""),
-            stateType: .constant(.featured),
+            stateType: .constant(.defaultState),
             queryData: .constant(QueryData())
         )
         .environmentObject(AuthViewModel())

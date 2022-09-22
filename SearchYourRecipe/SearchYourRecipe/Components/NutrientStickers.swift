@@ -89,6 +89,7 @@ struct NutrientStickerLarge: View {
                             .padding(7)
                             .overlay {
                                 Text(quantity)
+                                    .foregroundColor(Color.black.opacity(0.6))
                                     .fontWeight(.medium)
                             }
                         VStack(alignment: .leading) {

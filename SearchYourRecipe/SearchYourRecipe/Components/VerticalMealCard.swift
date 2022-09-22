@@ -13,15 +13,14 @@ struct VerticalMealCard: View {
     let imageUrl: String
     let label: String
     let nutrients: TotalNutrients
-    let userID: String
     
     @EnvironmentObject var authVM: AuthViewModel
     
     var body: some View {
         NavigationLink {
-            // Extract recipe ID from URI
+            // Extracted recipe ID from URI
             let recipeID = String(self.uri.suffix(32))
-            RecipeDetailsView(recipeID: recipeID, userID: userID)
+            RecipeDetailsView(recipeID: recipeID)
                 .environmentObject(authVM)
                 .toolbar(.hidden)
         } label: {
@@ -56,12 +55,42 @@ struct VerticalMealCard: View {
                 .padding([.leading, .trailing], 15)
                 
                 NutrientStickers(nutrients: [
-                    Nutrient(color: "sticker", label: "KCal", quantity: String(Int(nutrients.kcals.quantity)), units: "kcal"),
-                    Nutrient(color: "sticker", label: "Protein", quantity: String(Int(nutrients.protein.quantity)), units: "g"),
-                    Nutrient(color: "sticker", label: "Carbs", quantity: String(Int(nutrients.carbs.quantity)), units: "g"),
-                    Nutrient(color: "sticker", label: "Sugars", quantity: String(Int(nutrients.sugars.quantity)), units: "g"),
-                    Nutrient(color: "sticker", label: "Sat. Fat", quantity: String(Int(nutrients.satFat.quantity)), units: "g"),
-                    Nutrient(color: "sticker", label: "Fiber", quantity: String(Int(nutrients.fiber.quantity)), units: "g")
+                    Nutrient(
+                        color: "sticker",
+                        label: "KCal",
+                        quantity: String(Int(nutrients.kcals.quantity)),
+                        units: "kcal"
+                    ),
+                    Nutrient(
+                        color: "sticker",
+                        label: "Protein",
+                        quantity: String(Int(nutrients.protein.quantity)),
+                        units: "g"
+                    ),
+                    Nutrient(
+                        color: "sticker",
+                        label: "Carbs",
+                        quantity: String(Int(nutrients.carbs.quantity)),
+                        units: "g"
+                    ),
+                    Nutrient(
+                        color: "sticker",
+                        label: "Sugars",
+                        quantity: String(Int(nutrients.sugars.quantity)),
+                        units: "g"
+                    ),
+                    Nutrient(
+                        color: "sticker",
+                        label: "Sat. Fat",
+                        quantity: String(Int(nutrients.satFat.quantity)),
+                        units: "g"
+                    ),
+                    Nutrient(
+                        color: "sticker",
+                        label: "Fiber",
+                        quantity: String(Int(nutrients.fiber.quantity)),
+                        units: "g"
+                    )
                 ])
             }
             .padding(.bottom, 40)

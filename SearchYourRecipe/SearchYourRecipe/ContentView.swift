@@ -19,6 +19,7 @@ struct ContentView: View {
         Group {
             if authVM.session != nil {
                 HomeScreenView()
+                    .environmentObject(authVM)
             } else {
                 AuthView()
             }

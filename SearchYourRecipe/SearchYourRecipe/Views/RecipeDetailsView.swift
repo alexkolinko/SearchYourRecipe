@@ -10,10 +10,8 @@ import SwiftUI
 struct RecipeDetailsView: View {
     
     let recipeID: String
-    let userID: String
     
     @Environment(\.dismiss) private var dismiss
-    @EnvironmentObject var authVM: AuthViewModel
     @StateObject private var recipeDetailsVM = RecipeDetailViewModel()
     @State private var showNutrientList: Bool = false
     @State private var showIngredientList: Bool = false
@@ -26,8 +24,11 @@ struct RecipeDetailsView: View {
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView {
-                NavigationBar(dismiss: dismiss, pinButton: !recipeDetailsVM.fetchingError ? true : false, userID: userID, recipeID: recipeID)
-                    .environmentObject(authVM)
+                NavigationBar(
+                    dismiss: dismiss,
+                    pinButton: !recipeDetailsVM.fetchingError ? true : false,
+                    recipeID: recipeID
+                )
                 
                 if recipeDetailsVM.fetchingError {
                     ErrorCard {
@@ -39,13 +40,14 @@ struct RecipeDetailsView: View {
                     VStack {
                         LoadingIndicator(text: "Geting recipe info...", size: 2)
                     }
-                    .frame(width: K.SCREEN_WIDTH, height: K.SCREEN_HEIGHT / 2)
+                    .frame(width: Constant.SCREEN_WIDTH, height: Constant.SCREEN_HEIGHT / 2)
                 } else if let recipeData = recipeDetailsVM.recipeData?.recipe {
                     AsyncImage(url: URL(string: recipeData.image)) { image in
                         ZStack {
                             image
                                 .resizable()
                                 .scaledToFit()
+                                .cornerRadius(15)
                         }
                     } placeholder: {
                         ZStack {
@@ -56,6 +58,7 @@ struct RecipeDetailsView: View {
                         .scaledToFit()
                     }
                     .shadow(radius: 5, x: 0, y: 5)
+                    .padding([.trailing, .leading, .bottom], 5)
                     
                     VStack {
                         HStack {
@@ -64,7 +67,7 @@ struct RecipeDetailsView: View {
                             
                             Spacer()
                         }
-                        .padding(.bottom)
+                        .padding([.trailing, .leading, .bottom], 5)
                         
                         VStack {
                             HStack {
@@ -75,20 +78,50 @@ struct RecipeDetailsView: View {
                             
                             VStack {
                                 NutrientStickersRowLarge(nutrients: [
-                                    Nutrient(color: "sticker", label: "KCal", quantity: String(Int(recipeData.totalNutrients.kcals.quantity)), units: "kcal"),
-                                    Nutrient(color: "sticker", label: "Protein", quantity: String(Int(recipeData.totalNutrients.protein.quantity)), units: "g")
+                                    Nutrient(
+                                        color: "sticker",
+                                        label: "KCal",
+                                        quantity: String(Int(recipeData.totalNutrients.kcals.quantity)),
+                                        units: "kcal"
+                                    ),
+                                    Nutrient(
+                                        color: "sticker",
+                                        label: "Protein",
+                                        quantity: String(Int(recipeData.totalNutrients.protein.quantity)),
+                                        units: "g"
+                                    )
                                 ])
                                 NutrientStickersRowLarge(nutrients: [
-                                    Nutrient(color: "sticker", label: "Carbs", quantity: String(Int(recipeData.totalNutrients.carbs.quantity)), units: "g"),
-                                    Nutrient(color: "sticker", label: "Sugars", quantity: String(Int(recipeData.totalNutrients.sugars.quantity)), units: "g")
+                                    Nutrient(
+                                        color: "sticker",
+                                        label: "Carbs",
+                                        quantity: String(Int(recipeData.totalNutrients.carbs.quantity)),
+                                        units: "g"
+                                    ),
+                                    Nutrient(
+                                        color: "sticker",
+                                        label: "Sugars",
+                                        quantity: String(Int(recipeData.totalNutrients.sugars.quantity)),
+                                        units: "g"
+                                    )
                                 ])
                                 NutrientStickersRowLarge(nutrients: [
-                                    Nutrient(color: "sticker", label: "Sat. Fat", quantity: String(Int(recipeData.totalNutrients.satFat.quantity)), units: "g"),
-                                    Nutrient(color: "sticker", label: "Fiber", quantity: String(Int(recipeData.totalNutrients.fiber.quantity)), units: "g")
+                                    Nutrient(
+                                        color: "sticker",
+                                        label: "Sat. Fat",
+                                        quantity: String(Int(recipeData.totalNutrients.satFat.quantity)),
+                                        units: "g"
+                                    ),
+                                    Nutrient(
+                                        color: "sticker",
+                                        label: "Fiber",
+                                        quantity: String(Int(recipeData.totalNutrients.fiber.quantity)),
+                                        units: "g"
+                                    )
                                 ])
                             }
                         }
-                        .padding(.bottom)
+                        .padding([.trailing, .leading, .bottom], 5)
                         
                         VStack {
                             HStack {
@@ -177,7 +210,7 @@ struct RecipeDetailsView: View {
     
     struct RecipeDetailsView_Previews: PreviewProvider {
         static var previews: some View {
-            RecipeDetailsView(recipeID: "d086f51bd7ca046eac74bda9198ece46", userID: "")
+            RecipeDetailsView(recipeID: "d086f51bd7ca046eac74bda9198ece46")
                 .environmentObject(AuthViewModel())
         }
     }

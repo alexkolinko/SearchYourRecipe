@@ -10,9 +10,8 @@ import FirebaseAuth
 
 struct HomeScreenView: View {
     
-    @EnvironmentObject private var authVM: AuthViewModel
     @StateObject private var homeVM = HomeViewModel()
-    @State var currentStateType: StateType = StateType.featured
+    @State var currentStateType: StateType = StateType.defaultState
     @State var queryData: QueryData = QueryData()
     @State var searchTerm: String = ""
     
@@ -35,7 +34,7 @@ struct HomeScreenView: View {
                         }
                     }
                     
-                    if currentStateType == .featured {
+                    if currentStateType == .defaultState {
                         Text("Please search recipes")
                             .font(.system(.title, design: .rounded))
                     }
@@ -51,7 +50,7 @@ struct HomeScreenView: View {
                             VStack {
                                 LoadingIndicator(text: "Getting recipes...", size: 2)
                             }
-                            .frame(width: K.SCREEN_WIDTH, height: K.SCREEN_HEIGHT / 2)
+                            .frame(width: Constant.SCREEN_WIDTH, height: Constant.SCREEN_HEIGHT / 2)
                         } else if homeVM.fetchedRecipes.count == 0 {
                             NoRecipesFoundCard(searchTerm: searchTerm)
                         } else {
@@ -61,10 +60,8 @@ struct HomeScreenView: View {
                                         uri: recipe.recipe.uri,
                                         imageUrl: recipe.recipe.image,
                                         label: recipe.recipe.label,
-                                        nutrients: recipe.recipe.totalNutrients,
-                                        userID: authVM.session?.uid ?? ""
+                                        nutrients: recipe.recipe.totalNutrients
                                     )
-                                    .environmentObject(authVM)
                                 }
                             }
                         }
@@ -82,7 +79,6 @@ struct HomeScreenView: View {
             }
         }
     }
-
 }
 
 struct HomeScreenView_Previews: PreviewProvider {

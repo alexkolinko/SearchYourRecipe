@@ -21,10 +21,10 @@ class RecipeDetailViewModel: ObservableObject {
         }
         
         do {
-            let recipeResponse = try await RecipeService().get(url: K.URLs.recipeById(recipeID)) { data in
+            let recipeResponse = try await RecipeService().get(url: Constant.URLs.recipeById(recipeID)) { data in
                 return try? JSONDecoder().decode(Result.self, from: data)
             }
-
+            
             DispatchQueue.main.async {
                 self.recipeData = recipeResponse
                 self.recipeLoaded = true
